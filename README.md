@@ -11,3 +11,9 @@ How to test:
 	npm install
 	jspm install
 	./node_modules/.bin/electron .
+
+Unit Testing
+
+	npm install -g electron
+	npm install -g karma-cli
+	npm test
