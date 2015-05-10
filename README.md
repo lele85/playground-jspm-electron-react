@@ -1,5 +1,5 @@
-JSPM + Electron Playground
-==========================
+JSPM + React + Electron Playground
+==================================
 
 JSPM + ES6 modules + babel + electron + iojs + react = :O
 
