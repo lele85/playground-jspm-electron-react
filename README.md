@@ -10,9 +10,8 @@ How to test:
 	npm install -g jspm/jspm-cli -g
 	npm install
 	jspm install
-	./node_modules/.bin/electron .
+	npm start
 
 Unit Testing
 
-	npm install -g electron
 	npm test
