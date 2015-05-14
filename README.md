@@ -15,5 +15,4 @@ How to test:
 Unit Testing
 
 	npm install -g electron
-	npm install -g karma-cli
 	npm test
