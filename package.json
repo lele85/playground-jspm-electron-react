@@ -4,7 +4,8 @@
   "description": "",
   "main": "electron-main.js",
   "scripts": {
-    "test": "node_modules/.bin/karma start karma.config.js"
+    "test": "node_modules/.bin/karma start karma.config.js",
+    "start" : "sed 's@__CURRENT_PATH__@'$(pwd)'@g' ./config.baseurl.tpl.js > ./config.baseurl.js  && node_modules/.bin/electron ."
   },
   "author": "",
   "license": "ISC",

@@ -1,5 +1,4 @@
 System.config({
-  "baseURL": "file:///workspace/playground-jspm/",
   "transpiler": "babel",
   "babelOptions": {
     "optional": [
