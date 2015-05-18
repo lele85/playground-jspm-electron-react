@@ -19,6 +19,7 @@ System.config({
     "babel-runtime": "npm:babel-runtime@5.2.17",
     "core-js": "npm:core-js@0.9.7",
     "fetch": "npm:whatwg-fetch@0.8.1",
+    "fs": "github:jspm/nodelibs-fs@0.1.2",
     "react": "npm:react@0.13.3",
     "github:jspm/nodelibs-buffer@0.1.0": {
       "buffer": "npm:buffer@3.2.2"

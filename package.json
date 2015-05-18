@@ -5,7 +5,7 @@
   "main": "electron-main.js",
   "scripts": {
     "test": "node_modules/.bin/karma start karma.config.js",
-    "start" : "sed 's@__CURRENT_PATH__@'$(pwd)'@g' ./config.baseurl.tpl.js > ./config.baseurl.js  && node_modules/.bin/electron ."
+    "start": "sed 's@__CURRENT_PATH__@'$(pwd)'@g' ./config.baseurl.tpl.js > ./config.baseurl.js  && node_modules/.bin/electron ."
   },
   "author": "",
   "license": "ISC",
@@ -24,6 +24,7 @@
   "jspm": {
     "directories": {},
     "dependencies": {
+      "fs": "github:jspm/nodelibs-fs@^0.1.2",
       "react": "npm:react@^0.13.3"
     },
     "devDependencies": {
