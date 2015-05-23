@@ -1,12 +1,16 @@
 import React from 'react';
 import File from './File';
+import Directory from './Directory';
 
 class FileList extends React.Component {
 	render() {
-		var files = this.props.files.map((filename) => {
-			return (<li key={filename}><File raw={filename} /></li>);
+		var elements = this.props.files.map((file) => {
+			if (file.directory) {
+				return (<li key={file.name}><Directory name={file.name} /></li>);
+			}
+			return (<li key={file.name}><File name={file.name} /></li>);
 		})
-		return <ul>{files}</ul>;
+		return <ul>{elements}</ul>;
 	}
 };
 

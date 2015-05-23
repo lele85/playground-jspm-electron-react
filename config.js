@@ -21,6 +21,7 @@ System.config({
     "core-js": "npm:core-js@0.9.7",
     "events": "github:jspm/nodelibs-events@0.1.0",
     "fetch": "npm:whatwg-fetch@0.8.1",
+    "flux": "npm:flux@2.0.3",
     "fs": "github:jspm/nodelibs-fs@0.1.2",
     "glob": "npm:glob@5.0.9",
     "node-dir": "npm:node-dir@0.1.8",
