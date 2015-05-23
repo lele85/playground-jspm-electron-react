@@ -17,7 +17,7 @@
     "karma": "^0.12.31",
     "karma-chrome-launcher": "^0.1.10",
     "karma-cli": "0.0.4",
-    "karma-electron-launcher": "git://github.com/lele85/karma-electron-launcher.git",
+    "karma-electron-launcher": "0.0.2",
     "karma-jasmine": "^0.3.5",
     "karma-jspm": "^1.1.5"
   },
