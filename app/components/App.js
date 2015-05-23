@@ -7,6 +7,15 @@ class App extends React.Component {
 		super(props);
 		this.state = { files : AppStore.getAll() };
 	}
+	_onChange(){
+		this.setState({ files : AppStore.getAll() });
+	}
+	componentDidMount() {
+    	AppStore.addChangeListener(this._onChange.bind(this));
+  	}
+  	componentWillUnmount(){
+    	AppStore.removeChangeListener(this._onChange);
+  	}
 	render() {
 		return (
 			<div>

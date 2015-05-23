@@ -1,5 +1,5 @@
-import { Dispatcher } from "flux";
+import Flux from "flux";
 
-const AppDispatcher = Dispatcher;
+const AppDispatcher = new Flux.Dispatcher();
 
 export { AppDispatcher };
