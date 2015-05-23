@@ -1,15 +1,6 @@
 import React from 'react';
-import FileList from './file-list';
+import App from './components/App';
+import { getFiles } from './api';
 
-class HelloWorld extends React.Component {
-	render() {
-		return (
-			<div>
-				<h2>JSPM Playground</h2>
-				<FileList />
-			</div>
-		)
-	}
-};
-
-React.render(<HelloWorld />, document.body);
+getFiles(".").then((files) => console.log(files));
+React.render(<App />, document.body);

@@ -1,8 +1,8 @@
-import fs from 'fs';
+import glob from 'glob';
 
-var getFiles = function() {
+var getFiles = function(cwd) {
 	var p = new Promise((resolve, reject) => {
-		fs.readdir("./", (err, obj) => {
+		glob("*/", {cwd :cwd}, (err, obj) => {
 			if (err) {
 				reject();
 			} else {
