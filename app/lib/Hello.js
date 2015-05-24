@@ -1,0 +1,1 @@
+export var Hello = System._nodeRequire(__dirname + "/native/hello.node");

@@ -3,8 +3,9 @@ import React from 'react';
 import App from './components/App';
 import { getFiles, getDirectories } from './api';
 import { AppActions } from './actions/AppActions';
+import { Hello } from "./lib/Hello";
 
-
+console.log(Hello.hello());
 //getFiles(".").then((files) => console.log(files));
 //getDirectories(".").then((directories) => console.log(directories));
 
