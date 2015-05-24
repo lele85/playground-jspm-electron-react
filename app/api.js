@@ -18,18 +18,6 @@ var get = function(cwd, type) {
 
 var getFiles = function(cwd) {
   return get(cwd, "FILES");
-  var p = new Promise((resolve, reject) => {
-    glob("*", {
-      cwd: cwd
-    }, (err, obj) => {
-      if (err) {
-        reject();
-      } else {
-        resolve(obj);
-      }
-    });
-  });
-  return p;
 };
 
 var getDirectories = function(cwd) {
