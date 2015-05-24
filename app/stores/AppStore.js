@@ -1,19 +1,19 @@
 import events from "events";
 import { AppDispatcher } from "../dispatcher/AppDispatcher";
+import { ActionType } from "../constants/AppConstants";
 
 const CHANGE_EVENT = "change";
 
 const EventEmitter = events.EventEmitter;
-var _files = [{
-  name: "dir",
-  directory: true
-}, {
-  name: "file",
-  directory: false
-}];
+var _files = [];
+var _loading = true;
+
 const AppStore = Object.assign({}, EventEmitter.prototype, {
   getAll() {
     return _files;
+  },
+  isLoading() {
+    return _loading;
   },
   emitChange() {
   	this.emit(CHANGE_EVENT);
@@ -27,10 +27,10 @@ const AppStore = Object.assign({}, EventEmitter.prototype, {
 });
 
 AppDispatcher.register(function(action){
-	console.log(action)
 	switch(action.actionType) {
-		case "CHANGE_DIRECTORY_SUCCESS":
-			_files = [];
+		case ActionType.CHANGE_DIRECTORY_SUCCESS:
+			_files = action.content;
+      _loading = false;
 			AppStore.emitChange();
 			break;
 		default:

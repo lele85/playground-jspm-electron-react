@@ -1,10 +1,18 @@
 import { AppDispatcher } from '../dispatcher/AppDispatcher';
+import { ActionType } from "../constants/AppConstants";
 
 var AppActions = {
-  changeDirectorySuccess() {
+  changeDirectorySuccess(content) {
     AppDispatcher.dispatch({
-      actionType: "CHANGE_DIRECTORY_SUCCESS"
+      actionType: ActionType.CHANGE_DIRECTORY_SUCCESS,
+      content : content
     });
+  },
+  changeDirectory(path) {
+  	AppDispatcher.dispatch({
+  		actionType : ActionType.CHANGE_DIRECTORY,
+  		cwd : cwd
+  	})
   }
 };
 
